@@ -21,8 +21,8 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
-  String shopName = '';
-  String shopId = '';
+  String shopName = 'Tea & Food Point';
+  String shopId = '20';
   // late Future<List<total>> futuretotal;
   late Future<List<total>> futuretotal;
   double totalAmount = 0.0;
@@ -37,8 +37,8 @@ class _HomescreenState extends State<Homescreen> {
     });
   }
 
-  Future<void> initialize() async {
-    await fetchShopDetails(); // Ensure shop details are fetched first
+  void initialize() {
+    //await fetchShopDetails(); // Ensure shop details are fetched first
     setState(() {
       futuretotal = ApiTotal()
           .fetchtotal(shopId); // Initialize futuretotal after shopId is set

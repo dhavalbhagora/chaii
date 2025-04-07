@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            'Login to Chaii',
+            'Login to Chaiii',
             style: TextStyle(
               color: MyColors.white,
               fontWeight: FontWeight.bold,

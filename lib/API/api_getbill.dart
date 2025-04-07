@@ -8,7 +8,7 @@ class ApiServiceBill {
   Future<List<BillModal>> fetchBill(String shopId) async {
     // Use a POST request to send the shopId
     var url = Uri.parse("https://prakrutitech.buzz/Dhaval/getbill.php");
-    final response = await http.post(url, body: {"shopid": shopId});
+    final response = await http.post(url, body: {"shopid": '20'});
 
     if (response.statusCode == 200) {
       // Decode and map the response to a list of BillModal

@@ -17,14 +17,14 @@ class GenerateOder extends StatefulWidget {
 class _GenerateOderState extends State<GenerateOder> {
   late Future<List<BillModal>> futurebill;
   late String id;
-  String shopName = '';
-  String shopId = '';
+  String shopName = 'Tea & Food Point';
+  String shopId = '20';
   String Mode = '';
 
   @override
   void initState() {
     // super.initState();
-    fetchShopDetails();
+    //  fetchShopDetails();
     futurebill = ApiServiceBill().fetchBill(widget.shopId);
   }
 
@@ -46,6 +46,7 @@ class _GenerateOderState extends State<GenerateOder> {
         ),
         backgroundColor: MyColors.primaryColor,
       ),
+      backgroundColor: MyColors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

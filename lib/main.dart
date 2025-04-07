@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'HomeScreen.dart';
-import 'Screen/LoginScreen.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -51,7 +50,7 @@ class mychaiscreenState extends State<mychaiscreen> {
             context, MaterialPageRoute(builder: (context) => Homescreen()));
       } else {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => LoginScreen()));
+            context, MaterialPageRoute(builder: (context) => Homescreen()));
       }
     });
   }

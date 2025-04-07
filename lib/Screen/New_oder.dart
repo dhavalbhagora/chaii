@@ -32,16 +32,16 @@ class _NewOrderState extends State<NewOrder> {
   int grandTotal = 0;
   DateTime now = DateTime.now();
   late String amount, name, date, time, status, shopid;
-  String shopName = '';
-  String shopId = '';
+  String shopName = 'Tea & Food Point';
+  String shopId = '20';
 
-  Future<void> fetchShopDetails() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    setState(() {
-      shopName = prefs.getString('shopName') ?? 'No Shop Name';
-      shopId = prefs.getString('shopId') ?? 'No Shop ID';
-    });
-  }
+  // Future<void> fetchShopDetails() async {
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   setState(() {
+  //     shopName = prefs.getString('shopName') ?? 'No Shop Name';
+  //     shopId = prefs.getString('shopId') ?? 'No Shop ID';
+  //   });
+  // }
 
   @override
   void initState() {
@@ -49,7 +49,7 @@ class _NewOrderState extends State<NewOrder> {
     initializeDailyQuantity();
     futurermenu = ApiServiceMenu().fetchMenuItems(widget.shopId);
     futureCustomer = ApiService().fetchMenuItems(widget.shopId);
-    fetchShopDetails();
+    // fetchShopDetails();
   }
 
   void updateGrandTotal() {
